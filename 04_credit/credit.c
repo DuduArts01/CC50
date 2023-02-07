@@ -1,7 +1,8 @@
+// Online C compiler to run C program online
 #include <stdio.h>
 
 int main() {
-    int number, i = 0, c = 0;
+    int number, i = 0, c = 0, n;
     int digits[9999];
     
     printf("Number: ");
@@ -14,9 +15,20 @@ int main() {
     }   
     
     while(c < i){
-        printf("%i ", digits[c]);
+        if(c % 2 != 0){
+            n = digits[c]
+            
+            //multiply by 2
+            n *= 2;
+            
+            //separate digits
+            if(n % 10 != 0){
+                
+            }
+        }
+        //n reset    
+        n = 0;
         c++;
-        
     }
     
     printf("\n");
