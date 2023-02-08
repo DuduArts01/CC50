@@ -1,36 +1,38 @@
 #include <stdio.h>
 
-int main() {
-    int number, i = 0, c = 0, n;
-    int digits[9999];
-    
-    printf("Number: ");
-    scanf("%i", &number);
-    
-    while(number > 0){
-        digits[i] = (number % 10);
-        number = number / 10;
-        i++;
-    }   
-    
-    while(c < i){
-        if(c % 2 != 0){
-            n = digits[c]
-            
-            //multiply by 2
-            n *= 2;
-            
-            //separate digits
-            if(n % 10 != 0){
-                
-            }
+int main(void) {
+  char number;
+  int i = 0, c = 0, n1, sum1 = 0, sum2 = 0, sumtotal = 0;
+   
+  printf("Number: ");
+  scanf("%c", number);
+  
+  while(i){
+
+  }
+  
+  while(number >= 0){
+    c = (number % 10);
+    //sum1  
+    if (((i % 2) != 0) && (i != 0)) {
+      n1 = c * 2;
+
+      //if n1 for major that 10 separate this number in digit
+      if(n1 >= 10){
+        while(n1 > 0){
+          sum1 += (n1 % 10);
+          n1 /= 10;
         }
-        //n reset    
-        n = 0;
-        c++;
+      } else{
+        sum1 += n1;
+      }
     }
-    
-    printf("\n");
-    
-    return 0;
+    number /= 10;
+    i++;
+  }
+  
+  printf("sum1 = %i\n", sum1);    
+  
+  return 0;
 }
+
